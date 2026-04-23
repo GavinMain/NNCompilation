@@ -6,16 +6,16 @@ from torch.nn.utils.rnn import pad_sequence
 from _model import DiffusionModel, TextEncoder, ImageDataset, train_step, device
 
 #Hyper Parameters
-batch_size = 32
-num_epochs = 1000
+batch_size = 128
+num_epochs = 4000
 eval_interval = 100
-learning_rate = 1e-5
+learning_rate = 1e-4 
 cfg_prob = 0.1
 
 #Model Parameters
 image_size = (16, 16)
 in_channels = 3
-timesteps = 1000
+timesteps = 200
 beta_start = 0.0001
 beta_end = 0.02
 base_channels = 160
