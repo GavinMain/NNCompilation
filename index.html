@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PDF Viewer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #333;
+      padding: 10px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .navbar button {
+      background-color: #555;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .navbar button:hover {
+      background-color: #777;
+    }
+
+    .viewer {
+      width: 100%;
+      height: calc(100vh - 50px);
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <button onclick="loadPDF('report.pdf')">Report</button>
+    <button onclick="loadPDF('paper.pdf')">Paper</button>
+  </div>
+
+  <iframe id="pdfViewer" class="viewer" src="report.pdf"></iframe>
+
+  <script>
+    function loadPDF(file) {
+      document.getElementById('pdfViewer').src = file;
+    }
+  </script>
+
+</body>
+</html>
