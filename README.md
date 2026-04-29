@@ -14,7 +14,7 @@ In the terminal, run:
 ```bash
 chmod +x install.sh
 ./install.sh
-
+```
 ## Project Structure
 
 ### MLP and CNN
